@@ -118,7 +118,7 @@ class ThresholdMetric(Metric):
 
         matching = nx.max_weight_matching(G)
 
-        matching = [(g, p) for g, p in matching.items() if g in gold_spans]
+        matching = [(g, p) for g, p in matching if g in gold_spans]
 
         picked_gold = {}
         picked_pred = {}
